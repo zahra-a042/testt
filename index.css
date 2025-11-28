@@ -1,0 +1,174 @@
+ 
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background: #e6f2fa;
+    color: #034f84;
+    padding-top: 80px;  
+}
+ 
+header {
+    background: #add8e6;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+nav a {
+    color: #034f84;
+    text-decoration: none;
+    font-weight: bold;
+}
+ 
+.slider {
+    position: relative;
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.slides img {
+    width: 100%;
+    display: none;
+}
+
+.slides img.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    background:  #034f84;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    transform: translateY(-50%);
+}
+
+.prev { right: 10px; }
+.next { left: 10px; }
+ 
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #bbb;
+    border-radius: 50%;
+    margin: 4px;
+}
+
+.dot.active {
+    background: #034f84;
+}
+ 
+.title {
+    text-align: center;
+    margin-top: 20px;
+    color: #034f84;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.card {
+    background: white;
+    width: 180px;
+    padding: 50px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+ 
+}
+
+.card img {
+    width: 100%;
+    border-radius: 4px;
+    height: 55%;
+}
+
+.card button {
+    margin-top: 8px;
+    padding: 6px 12px;
+    background: #034f84;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+ 
+.old-price {
+    text-decoration: line-through;
+    color: red;
+    margin: 5px 0 0 0;
+}
+
+.new-price {
+    color: green;
+    font-weight: bold;
+    margin: 3px 0 0 0;
+}
+ 
+.brands {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.brands img {
+    width: 100px;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.brands img:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+ 
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+    .brands {
+        flex-direction: column;
+        align-items: center;
+    }
+}
